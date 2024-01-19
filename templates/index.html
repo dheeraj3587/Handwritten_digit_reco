@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CNN Digit Recognition </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontsource-jetbrains-mono@3.15.0/css/all.css" integrity="sha512-XXXXXXX">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="hero-section text-center bg-blue-500 py-12">
+    <p class="text-lg text-gray-300">Built with PyTorch and Flask</p>
+</div>
+
+<div class="text-center mt-6">
+    <p class="text-gray-500 text-sm">Created by <span class="italic font-bold">Dheeraj Joshi</span></p>
+</div>
+
+    <br>
+    <div class="text-center">
+        <div class="inline-block align-top m-1">
+            <canvas class="border border-black" id="inputimg" width="196" height="196"></canvas>
+            <button class="bg-blue-50 hover:bg-blue-200 border border-blue-300 border-t-0 w-full" id="clearbtn">Clear</button>
+        </div>
+        <div class="inline-block align-top m-1">
+            <div class="border border-black text-9xl w-[198px] h-[198px] leading-[198px]" id="pred">0</div>
+            <div class="w-full" id="prob">Probability: </div>
+        </div>
+        <div class="inline-block align-top m-1">
+            <svg id="probGraph" width="250" height="196"></svg>
+        </div>
+    </div>
+
+   <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+</body>
+</html>
