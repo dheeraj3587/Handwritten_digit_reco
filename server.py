@@ -62,7 +62,12 @@ class Predict():
 
 if __name__ == "__main__":
     import os
-    assert os.path.exists(SAVE_MODEL_PATH), "no saved model"
-    predict = Predict()
+    SAVE_MODEL_PATH = 'trained_model.pth'
+    assert os.path.exists(SAVE_MODEL_PATH), "No saved model found at {}".format(SAVE_MODEL_PATH)
 
-    app.run(host="0.0.0.0", port=5001)
+    try:
+        predict = Predict()
+        app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+    except Exception as e:
+        print("Error during application startup:", str(e))
+        raise e
