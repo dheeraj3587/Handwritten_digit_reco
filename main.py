@@ -29,7 +29,7 @@ loaders={
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
-SAVE_MODEL_PATH ='trained_model.pth'
+SAVE_MODEL_PATH ='trained_model_1.pth'
 class CNN(nn.Module):
     def __init__(self):
         super(CNN,self).__init__()
