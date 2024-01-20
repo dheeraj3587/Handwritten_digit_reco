@@ -8,6 +8,8 @@ pipx==1.4.3
 platformdirs==4.1.0
 PyYAML==6.0.1
 setuptools==69.0.3
+Flask==3.0.1
+Flask-Cors==4.0.0
 userpath==1.9.1
 torch==2.1.2
 torchvision==0.16.2
